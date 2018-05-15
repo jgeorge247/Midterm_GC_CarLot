@@ -22,7 +22,7 @@ namespace Midterm_GC_CarLot
         }
         public static int ValidateInput()
         {
-            Console.WriteLine("Enter an option between 1-6");
+            Console.WriteLine("Enter an option between 1-5");
             string Response = Console.ReadLine();
             int NumResponse = 0;
             bool valid = int.TryParse(Response, out NumResponse);

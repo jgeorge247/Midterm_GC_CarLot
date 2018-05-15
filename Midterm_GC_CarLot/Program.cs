@@ -49,14 +49,15 @@ namespace Midterm_GC_CarLot
                 Console.WriteLine("Would you like to continue? (Y/N)");
                 string Response2 = Console.ReadLine().ToUpper();
 
-                if (Response2 != "Y" || Response2 != "N")
+                while (Response2 != "Y" && Response2 != "N")
                 {
                     Console.WriteLine("Invalid input. Please write (Y/N)");
-                    Response2 = Console.ReadLine();
+                    Response2 = Console.ReadLine().ToUpper();
                 }
-                else if (Response2 == "N")
+
+                if (Response2 == "N")
                 {
-                     repeat = false;
+                    repeat = false;
                 }
             }
         }
@@ -67,7 +68,7 @@ namespace Midterm_GC_CarLot
             Console.WriteLine("3. Remove a car");
             Console.WriteLine("4. Look up a car in a given position");
             Console.WriteLine("5. Replace a car in a given position");
-            Console.WriteLine("6. Quit");
         }
     }
 }
+ 
